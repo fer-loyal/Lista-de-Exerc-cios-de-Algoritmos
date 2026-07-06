@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 08</title>
+</head>
+<body>
+    <div>Insira o valor da pizza e a quantidade de pessoas que vão dividir:</div>
+    <input type="text" id="ipt_valor" placeholder="valor">
+    <input type="text" id="ipt_qtd_amigos" placeholder="quantidade de amigos">
+    <br><br>
+    <button onclick="calcular()">#lovePizza</button>
+    
+</body>
+<script>
+    function calcular() {
+        let valor = Number(ipt_valor.value);
+        let amigos = Number(ipt_qtd_amigos.value);
+        let valorDividido = valor / amigos;
+
+        alert(`Cada um dos ${amigos} vai pagar R$${valorDividido}`);
+
+    }
+</script>
+</html>

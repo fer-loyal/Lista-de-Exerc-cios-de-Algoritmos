@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 09</title>
+</head>
+<body>
+
+    <div><b>Para saber quanto você economizará utilizando o Bilhete Único de estudante, insira os seguintes dados:</b></div>
+    
+    <label>Valor da passagem</label>
+    <input type="text" id="ipt_valor_da_passagem">
+    <br>
+
+    <label>Quantidade de viagens que fará no mês</label>
+    <input type="text" id="ipt_qtd_de_viagens">
+    <br><br>
+    <button onclick="calcularEconomia()">Ver economia</button>
+</body>
+<script>
+    function calcularEconomia() {
+        let valorPassagem = Number(ipt_valor_da_passagem.value);
+        let qtdViagens = Number(ipt_qtd_de_viagens.value);
+
+        let gastoComum = valorPassagem * qtdViagens;
+        let gastoEstudante = (valorPassagem/2) * qtdViagens;
+        let economia = gastoComum - gastoEstudante;
+
+        alert(`Você economizará R$${economia} por mês`);
+
+    }
+</script>
+</html>

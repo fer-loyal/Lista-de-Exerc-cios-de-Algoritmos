@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 11</title>
+</head>
+<body>
+    <div>Insira dois números a seguir:</div>
+    <input type="text" id="ipt_num1">
+    <input type="text" id="ipt_num2">
+    <br><br>
+
+    <button onclick="soma()">Soma</button>
+    <br>
+    <button onclick="subtracao()">Subtração</button>
+    <br>
+    <button onclick="multiplicacao()">Multiplicação</button>
+    <br>
+    <button onclick="divisao()">Divisão</button>
+    <br><br>
+    <div id="resultado"></div>
+
+</body>
+<script>
+    function soma(){
+        let num1 = Number(ipt_num1.value);
+        let num2 = Number(ipt_num2.value);
+        resultado.innerHTML = ``;
+
+        let soma =num1 + num2;
+
+        resultado.innerHTML += ` A soma entre ${num1} e ${num2} é ${soma} `;
+    }
+
+    function subtracao(){
+        let num1 = Number(ipt_num1.value);
+        let num2 = Number(ipt_num2.value);
+        resultado.innerHTML = ``;
+
+        let subtracao = num1 - num2;
+
+        resultado.innerHTML += ` A diferença entre ${num1} e ${num2} é ${subtracao} `;
+    }
+
+    function multiplicacao(){
+        let num1 = Number(ipt_num1.value);
+        let num2 = Number(ipt_num2.value);
+        resultado.innerHTML = ``;
+
+        let multiplicacao = num1 * num2;
+
+        resultado.innerHTML += ` O produto entre ${num1} e ${num2} é ${multiplicacao} `;
+    }
+
+    function divisao(){
+        let num1 = Number(ipt_num1.value);
+        let num2 = Number(ipt_num2.value);
+        resultado.innerHTML = ``;
+
+        let divisao = num1 / num2;
+
+        resultado.innerHTML += ` A razão entre ${num1} e ${num2} é ${divisao} `;
+    }
+</script>
+</html>

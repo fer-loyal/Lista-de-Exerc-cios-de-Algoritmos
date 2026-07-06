@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 06</title>
+</head>
+<body>
+    <div>Digite o nome da rua e o numero da casa onde você mora:</div>
+
+    <input type="text" id="ipt_nome" placeholder="Nome da rua">
+    <input type="text" id="ipt_numero" placeholder="Numero da casa">
+    <br>
+
+    <button onclick="resultado()">Onde eu moro </button>
+    
+</body>
+<script>
+    function resultado() {
+        let nome = ipt_nome.value;
+        let numero = Number(ipt_numero.value);
+
+        alert(`Seu logradouro é ${nome}`);
+        alert(`O número do seu logradouro é ${numero}`);
+    }
+</script>
+</html>

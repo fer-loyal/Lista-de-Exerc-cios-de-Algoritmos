@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 05</title>
+</head>
+<body>
+
+    <div>Digite o nome do time que você torce e a quantidade de títulos que ele possui</div>
+
+    <input type="text" id="ipt_time" placeholder="Time">
+    <input type="text" id="ipt_titulos" placeholder="Títulos">
+    <br>
+
+    <button onclick="timeAlerta()">Amo meu time</button>
+
+</body>
+<script>
+    function timeAlerta() {
+        let time = ipt_time.value;
+        let titulos = Number(ipt_titulos.value);
+
+        alert(`O time ${time} tem ${titulos} títulos`);
+
+    }
+
+</script>
+</html>

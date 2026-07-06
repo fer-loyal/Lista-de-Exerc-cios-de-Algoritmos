@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 03</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Cidade Natal" id="ipt_cidade_natal">
+    <br>
+    <input type="text" placeholder="Ano de Nascimento" id="ipt_ano_nascimento">
+    <br><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="resultado"></div>
+    
+</body>
+<script>
+    function cadastrar() {
+        let cidade = ipt_cidade_natal.value;
+        let ano = Number(ipt_ano_nascimento.value);
+        
+        resultado.innerHTML = `Você nasceu na cidade de ${cidade} em ${ano}`;
+    }
+</script>
+</html>

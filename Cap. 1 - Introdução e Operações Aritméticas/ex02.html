@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 02</title>
+</head>
+<body>
+
+    <label>Insira sua nota aqui:</label>
+    <input type="text" id="nota_ipt">
+    <br><br>
+
+    <button onclick="opniaoAvo()">opnião da avó</button>
+    <br>
+    <button onclick="opniaoMae()">opnião da mãe</button>
+    <br><br>
+
+    <div id="resultado"></div>
+    
+</body>
+<script>
+
+    function opniaoAvo() {
+        let nota = Number(nota_ipt.value);
+        resultado.innerHTML = `Muito bem, que neto inteligente, porque tirou ${nota}`;
+    }
+
+    function opniaoMae() {
+        let nota = Number(nota_ipt.value);
+        resultado.innerHTML = `Não fez mais que tua obrigação com essa nota ${nota}`;
+    }
+</script>
+</html>

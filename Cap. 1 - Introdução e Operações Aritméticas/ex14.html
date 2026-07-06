@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 14</title>
+</head>
+<body>
+    <label>Insira um valor a ser depositado/retirado</label>
+    <input type="text" id="ipt_valor">
+    <br><br>
+
+    <button onclick="depositar()">Depositar</button>
+    <br>
+    <button onclick="retirar()">Retirar</button>    
+</body>
+<script>
+    let saldo = 0 ;
+
+    function depositar() {
+        let valor = Number(ipt_valor.value);
+
+        saldo = saldo + valor
+        alert(`Depósito de R$${valor} efetuado! Saldo atual: R$${saldo}`);
+    }
+
+    function retirar() {
+        let valor = Number(ipt_valor.value);
+
+        saldo = saldo - valor
+        alert(`Retirada de R$${valor} efetuada! Saldo atual: R$${saldo}`);
+    }
+</script>
+</html>

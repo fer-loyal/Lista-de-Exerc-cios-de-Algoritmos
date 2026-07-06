@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex.01</title>
+</head>
+
+<body>
+
+<button onclick="pare()" >Pare</button>
+<br><br>
+
+<button onclick="pense()">Pense</button>
+<br><br>
+
+<button onclick="siga()">Siga</button>
+<br><br>
+
+<div id="resultado"></div>
+
+</body>
+<script>
+
+    function pare() {
+        resultado.innerHTML = `Pare e aguarde!`;
+    }
+
+    function pense() {
+        resultado.innerHTML = `Pense se pode seguir ou se deve parar!`;
+    }
+
+    function siga() {
+        resultado.innerHTML = `Pode seguir adiante!`;
+    }
+</script>
+</html>

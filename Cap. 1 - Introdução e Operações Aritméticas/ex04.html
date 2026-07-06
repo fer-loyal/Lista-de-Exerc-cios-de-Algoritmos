@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 04</title>
+</head>
+<body>
+
+    <input type="text" id="ipt_peso" placeholder="Digite seu peso">
+    <input type="text" id="ipt_altura" placeholder="Digite sua altura">
+    <br><br>
+    <button onclick="faleComigo()">Fale comigo</button>
+
+</body>
+<script>
+    function faleComigo() {
+        let peso = Number(ipt_peso.value);
+        let altura = Number(ipt_altura.value);
+
+        alert(`Você pesa ${peso} e tem ${altura} de altura`);
+    }
+</script>
+</html>
