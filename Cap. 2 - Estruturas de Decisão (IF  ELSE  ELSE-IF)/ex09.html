@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Qual o valor do seu saldo na sua conta?</label>
+    <input type="text" id="ipt_valor_saldo">
+
+    <br><br>
+
+    <button onclick="verificar()">Verificar Finanças</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function verificar() {
+        let saldo = Number(ipt_valor_saldo.value);
+
+        if ( saldo == 0) {
+            resultado.innerHTML = ` <p> Conta zerada </p>`;
+        }
+
+        else if ( saldo < 0 ) {
+            resultado.innerHTML = ` <p style="color: red"> Está devendo! </p>`;
+        }
+
+        else {
+            resultado.innerHTML = ` <p style="color: blue"> Saldo positivo! ╰(*°▽°*)╯ </p>`;
+        }
+    }
+</script>
+</html>

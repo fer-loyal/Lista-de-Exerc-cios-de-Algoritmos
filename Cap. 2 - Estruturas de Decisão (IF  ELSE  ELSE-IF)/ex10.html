@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt_qtd_chocolates_comprados" placeholder="chocolates comprados">
+
+    <br><br>
+
+    <button onclick="calcular()">Compra</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function calcular() {
+        let chocolates = Number(ipt_qtd_chocolates_comprados.value);
+        let preco = 0;
+
+        if ( chocolates > 12) {
+            let preco = chocolates * 2.50;
+            resultado.innerHTML = ` o valor da sua compra foi de $${preco}`;
+        }
+
+        else {
+            let preco = chocolates * 3;
+            resultado.innerHTML = ` o valor da sua compra foi de $${preco}`;
+        }
+    }
+</script>
+</html>

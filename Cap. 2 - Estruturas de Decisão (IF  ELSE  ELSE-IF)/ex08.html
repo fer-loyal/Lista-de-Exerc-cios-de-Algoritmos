@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Informe a última série SITCOM que você assistiu</label>
+    <input type="text" id="ipt_ultima_serie">
+
+    <br><br>
+
+    <label>Informe o total de episódios que você assistiu</label>
+    <input type="text" id="ipt_total_episodios">
+
+    <br><br>
+
+    <button onclick="verificar()">Verificar o Nível</button>
+
+    <br><br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function verificar() {
+        let serie = ipt_ultima_serie.value;
+        let qtdEpisodios = Number(ipt_total_episodios.value);
+
+        /* 1 ep equivale a 0.36 horas */
+        let horasGastas = qtdEpisodios * 0.36;
+
+        if(horasGastas > 30) {
+            resultado.innerHTML = ` Vejo que você gosta da série ${serie} <br>
+            Uau, você realmente gosta dessa série!
+            `;
+        }
+
+        else {
+            resultado.innerHTML = ` Vejo que você gosta da série ${serie} `;
+        }
+    }
+</script>
+</html>

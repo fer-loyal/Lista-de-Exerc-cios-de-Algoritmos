@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt_homens" placeholder="homens do elevador">
+
+    <br><br>
+
+    <input type="text" id="ipt_mulheres" placeholder="mulheres no elevador">
+
+    <br><br>
+
+    <button onclick="calcular()">Analisar peso</button>
+
+    <br><br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function calcular() {
+        let homem = Number(ipt_homens.value);
+        let mulher = Number(ipt_mulheres.value);
+
+        let pesoHomem = homem * 80;
+        let pesoMulher = mulher * 60;
+        let pesoElevador = pesoHomem + pesoMulher;
+
+        if (pesoElevador < 800) {
+            resultado.innerHTML = ` Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${pesoElevador}kg `;
+        }
+
+        else {
+            resultado.innerHTML = ` Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${pesoElevador}kg <br>
+            <p style="color: blue"> Será necessário que alguém desça para que o elevador se movimente </p>
+            `;
+        }
+    }
+</script>
+</html>
