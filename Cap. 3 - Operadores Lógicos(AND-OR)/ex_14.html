@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Informe sua nota e frequência:</div>
+    <input type="text" id="ipt_nota" placeholder="Nota">
+    <input type="text" id="ipt_frequencia" placeholder="Frequência">
+
+    <br><br>
+
+    <button onclick="analisar()">Analisar aluno</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+    <div id="resultadoFreq"></div>
+</body>
+<script>
+    function analisar(){
+        let nota = Number(ipt_nota.value);
+        let freq = Number(ipt_frequencia.value);
+
+        if ( nota < 0 || nota > 10) {
+            alert(`Onde já se viu nota <0 ou >10?!`);
+                resultado.innerHTML = ``;
+        }
+
+        else if ( freq < 0 || freq > 100 ) {
+            alert(`Onde já se viu frequência <0 ou >100?!`);
+            resultado.innerHTML = ``;
+        }
+
+        else if ( nota >= 0 && nota < 6 ) {
+            resultado.innerHTML = `Aluno ficou abaixo da média <br>`;
+        }
+
+        else if ( nota > 6 && nota < 8 ) {
+            resultado.innerHTML = `Aluno ficou na média <br>`;
+        }
+
+        else if ( nota >= 8 && nota <= 10 ) {
+            resultado.innerHTML = `Aluno acima da média <br>`;
+        }
+
+        if ( freq > 75 ) {
+            resultadoFreq.innerHTML = `Aluno aprovado por frequência`;
+        }
+
+        else if ( freq < 75) {
+            resultadoFreq = `Aluno reprovado por frequência`;
+        }
+    }
+</script>
+</html>
+
+<!-- CÓDIGO INICIAL : Tive dificuldade na lógica desse exercício, especialmente nas validações dele

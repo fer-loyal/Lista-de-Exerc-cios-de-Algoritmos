@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Informe o tamanho da tela do celular:</label>
+    <input type="text" id="ipt_tela">
+
+    <br><br>
+
+    <label>Informe a cor do celular:</label>
+    <select id="select_cor_celular">
+        <option value="preto">Preto</option>
+        <option value="prata">Prata</option>
+        <option value="azul">Azul</option>
+        <option value="vermelho">Vermelho</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="verificar()">Será que ele gosta?</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+    
+</body>
+<script>
+    function verificar() {
+        let tela = Number(ipt_tela.value);
+        let cor = select_cor_celular.value;
+
+        if ( tela > 6.5 && ( cor == "prata" || cor == "preto") ) {
+            resultado.innerHTML = ` <img src="feliz.png" width="100px" height="100px">  `;
+        } 
+
+        else {
+            resultado.innerHTML = ` <img src="triste.png" width="100px" height="100px"> `;
+        }
+
+    }
+</script>
+</html>

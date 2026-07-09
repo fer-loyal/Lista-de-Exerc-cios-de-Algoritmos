@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+</head>
+<body>
+    <label>Qual a temperatura atual?</label>
+    <input type="text" id="ipt_temperatura">
+
+    <br><br>
+
+    <button onclick="analisar()">Analisar clima</button>
+
+</body>
+<script>
+    function analisar() {
+        let temperatura = Number(ipt_temperatura.value);
+
+        let tempDesconfortavel = false;
+
+        if ( temperatura > 24 && temperatura < 21 ) {
+            let tempDesconfortavel = true;
+        }
+
+        if ( tempDesconfortavel = true && temperatura < 21 ) {
+            alert(`Alerta de desconforto!`);
+            alert(`As pessoas vão ter hipotermia`);
+        }
+
+        else if ( tempDesconfortavel = true && temperatura > 24 ) {
+            alert(`Alerta de desconforto!`);
+            alert(`As pessoas vão derreter!`);
+        } 
+
+    }
+</script>
+</html>
