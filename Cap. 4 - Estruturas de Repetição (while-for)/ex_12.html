@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Quantas cocas vc já tomou?</label>
+    <input type="text" id="ipt_cocas">
+
+    <br><br>
+
+    <button onclick="ver()">Ver a quantidade</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function ver() {
+        let coca = Number(ipt_cocas.value);
+        let imgCoca = `<img src="guaravita.png" width=80px height=80px >`;
+        
+        resultado.innerHTML = ``;
+
+        for ( let i = 0 ; i < coca ; i++) {
+            resultado.innerHTML += `${imgCoca}`;
+        }
+    }
+</script>
+</html>

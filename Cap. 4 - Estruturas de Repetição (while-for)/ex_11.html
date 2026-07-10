@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt_qtd_pessoas" placeholder="Informe quantas pessoas vão entrar no carro">
+    <input type="text" id="ipt_capacidade" placeholder="Informe a capacidade máxima de pessoas">
+
+    <br><br>
+
+    <button onclick="carona()">#PartiuCarona</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function carona() {
+        let qtdPessoas = Number(ipt_qtd_pessoas.value);
+        let capacidade = Number(ipt_capacidade.value);
+
+        resultado.innerHTML = ``;
+
+        for ( let i = 1 ; i <= qtdPessoas ; i++ ) {
+            passageiro = i;
+
+            if ( i == 1 ) {
+                resultado.innerHTML += `Entrou o ${i}º passageiro (que é o(a) motorista) <br>`;
+            }
+
+            else if ( i <= capacidade ) {
+                resultado.innerHTML += ` Entrou o ${i}º passageiro <br>`;
+            }
+
+            else if ( i > capacidade ) {
+                resultado.innerHTML += ` O ${i}º passageiro terá que esperar! <br> `;
+            }
+        }
+    }
+</script>
+</html>

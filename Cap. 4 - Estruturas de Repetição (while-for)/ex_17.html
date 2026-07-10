@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt_depositos" placeholder="depositos">
+    <input type="text" id="ipt_valor" placeholder="valor dos depositos">
+
+    <br><br>
+
+    <button onclick="acompanhar()">Acompanhar grana</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+    <br>
+    <div id="total"></div>
+</body>
+<script>
+    function acompanhar() {
+        let depositos = Number(ipt_depositos.value);
+        let valor = Number(ipt_valor.value);
+
+        let acumulado = 0; /* criar uma variável dessa auxilia a colocar o total no fim,
+                        pois ela não vai sumir depois do loop e vai somar os valores dos depositos*/
+
+        resultado.innerHTML = ``;
+
+        for (let i = 1 ; i <= depositos ; i++) {
+            acumulado += valor;
+            resultado.innerHTML += `${i} Mês: R$ ${acumulado.toFixed(2)} <br>`;
+        }
+
+        total.innerHTML = `Total guardado: R$${acumulado.toFixed(2)}`;
+    }
+</script>
+</html>

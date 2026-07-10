@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Quantas xícaras de café você já tomou na sua vida?</label>
+    <input type="text" id="ipt_xicaras">
+
+    <br><br>
+
+    <button onclick="ver()">Ver a quantidade</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function ver() {
+        let xicaras = Number(ipt_xicaras.value);
+
+        resultado.innerHTML = ``;
+
+        for ( let i = 0 ; i < xicaras ; i++) {
+            resultado.innerHTML += ` 🥛☕☕ <br> <br> `;
+        }
+
+    }
+</script>
+</html>

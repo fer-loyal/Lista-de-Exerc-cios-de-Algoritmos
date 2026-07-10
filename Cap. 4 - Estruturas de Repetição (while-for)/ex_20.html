@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Informe sua idade:</label>
+    <input type="text" id="ipt_idade" placeholder="Sua idade aqui!">
+
+    <br><br>
+
+    <button onclick="mostrar()">Fases da Vida</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+
+</body>
+<script>
+    function mostrar() {
+        let idade = Number(ipt_idade.value);
+
+        resultado.innerHTML = ``;
+
+        for ( let i = 0 ; i <= idade ; i++ ) {
+
+            if ( i >= 0 && i <= 4 ) {
+                resultado.innerHTML += ` ${i} anos (Primeira Infância) <br> <br> `;
+            }
+
+            else if ( i > 4 && i <= 6 ) {
+                resultado.innerHTML += ` ${i} anos (Pré-escolar) <br> <br>`;
+            }
+
+            else if ( i > 6 && i <= 10 ) {
+                resultado.innerHTML += ` ${i} anos (Segunda Infância) <br> <br>`;
+            }
+
+            else if ( i > 10 && i <= 18 ) {
+                resultado.innerHTML += ` ${i} anos (Adolescência) <br> <br>`; 
+            }
+
+            else if ( i > 18 && i <= 50 ) {
+                resultado.innerHTML += ` ${i} anos (Adulto) <br> <br>`;
+            }
+
+            else if ( i > 50 && i <= 100 ) {
+                resultado.innerHTML += ` ${i} anos (Melhor Idade) <br> <br>`;
+            }
+
+            else {
+                resultado.innerHTML += ` ${i} anos (Matusalém) <br> <br>`;
+            }
+        }
+    }
+</script>
+</html>

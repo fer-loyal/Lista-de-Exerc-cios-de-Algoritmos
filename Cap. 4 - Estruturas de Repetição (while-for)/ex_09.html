@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Qual tabuada você que ver?</label>
+    <select id="ipt_tabuada">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+
+    <br>
+
+    <label>Até que número ela deve ser construída?</label>
+    <input type="text" id="ipt_num_max" placeholder="Número Máximo">
+
+    <br><br>
+
+    <button onclick="calcular()">Ver Tabuada</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function calcular() {
+        let tabuada = Number(ipt_tabuada.value);
+        let numMax = Number(ipt_num_max.value);
+
+        resultado.innerHTML = ``;
+
+        for ( let i = 1 ; i <= numMax ; i++) {
+            let resultadoMultiplicacao = tabuada * i;
+            if ( i % 2 == 0 ) {
+                resultado.innerHTML += `<p style="color: blue">
+                ${tabuada} x ${i}=${resultadoMultiplicacao} <br>
+                </p>        
+                `;
+            }
+
+            else {
+                resultado.innerHTML += `<p style="color: red">
+                ${tabuada} x ${i}=${resultadoMultiplicacao} <br>
+                </p>        
+                `;
+            }
+        }
+    }
+</script>
+</html>

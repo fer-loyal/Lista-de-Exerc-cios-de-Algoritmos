@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt_num1" placeholder="número menor">
+    <input type="text" id="ipt_num2" placeholder="número maior">
+
+    <br><br>
+
+    <button onclick="ver()"> S2 Pares</button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function ver() {
+        let num1 = Number(ipt_num1.value);
+        let num2 = Number(ipt_num2.value);
+
+        resultado.innerHTML = ``;
+
+        for ( let i = num1 ; i < num2 ; i++) {
+
+            if ( i % 2 == 0 ) {
+                resultado.innerHTML += `${i} <br>`;
+            }
+        }
+    }
+</script>
+</html>

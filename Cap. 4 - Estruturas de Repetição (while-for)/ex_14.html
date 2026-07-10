@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt_num1" placeholder="número menor">
+    <input type="text" id="ipt_num2" placeholder="número maior">
+
+    <br><br>
+
+    <button onclick="ver()"> Curto 3 e 5 </button>
+
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+<script>
+    function ver() {
+        let num1 = Number(ipt_num1.value);
+        let num2 = Number(ipt_num2.value);
+
+        resultado.innerHTML = ``;
+
+        for ( let i = num1 ; i <= num2 ; i++ ) {
+
+            let textoExibir = i; /* por padrao, vai exibir o proprio número */
+
+            if ( i % 5 == 0  && i % 3 == 0  ) {
+                textoExibir = `É TRI!É PENTA!`;
+            }
+
+            else if ( i % 5 == 0 ) {
+                textoExibir = `É PENTA!`;
+            }
+
+            else if ( i % 3 == 0 ) {
+                textoExibir = `É TRI!`;
+            }
+
+            resultado.innerHTML += `${textoExibir} <br>`;
+        }
+    }
+</script>
+</html>
+
+
+<!-- Abaixo é o código inicial, que deu problema e que tive dificuldade de entender a lógica -->
+ <!-- obs. O i criado no loop não pode ser alterado fora dele -->
+
+<!-- <script>
+    function ver() {
+        let num1 = Number(ipt_num1.value);
+        let num2 = Number(ipt_num2.value);
+
+        resultado.innerHTML = ``;
+
+        for ( let i = num1 ; i <= num2 ; i++ ) {
+
+            if ( i % 5 == 0  && i % 3 == 0  ) {
+                let i = `É TRI!É PENTA!`;
+            }
+
+            else if ( i % 5 == 0 ) {
+                let i = `É PENTA!`;
+            }
+
+            else if ( i % 3 == 0 ) {
+                let i = `É TRI!`;
+            }
+
+            resultado.innerHTML += `${i} <br>`;
+        }
+    }
+</script> -->
